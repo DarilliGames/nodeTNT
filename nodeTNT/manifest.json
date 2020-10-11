@@ -1,11 +1,8 @@
 {
-"name":"nodeBreaker",
-"description":"Does fun things",
+"name":"nodeTNT",
+"description":"Spawns TnT on me",
 "version":"1.11",
 "manifest_version": 2,
-"permissions":[
-    "storage"
-],
 "content_scripts": [
     {
       "matches": [
@@ -15,7 +12,7 @@
       ],
       "js": [
           "jquery.js",
-          "nodebreaker.js"
+          "nodeTnt.js"
       ]
     }
   ]
