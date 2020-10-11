@@ -1,0 +1,22 @@
+{
+"name":"nodeBreaker",
+"description":"Does fun things",
+"version":"1.11",
+"manifest_version": 2,
+"permissions":[
+    "storage"
+],
+"content_scripts": [
+    {
+      "matches": [
+          "<all_urls>",
+          "https://www.twitch.tv/darilli"
+      
+      ],
+      "js": [
+          "jquery.js",
+          "nodebreaker.js"
+      ]
+    }
+  ]
+}
