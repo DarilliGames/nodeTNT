@@ -1,17 +1,17 @@
 var theTimer = 120000;
 
-function tntDropLoop(){
-    setTimeout(function(){ 
-    console.log(("Creeper", theTimer));
-    if(theTimer > 1000){
-    	theTimer = theTimer*.9;
-        if(theTimer < 1000){
-        theTimer = 1000;
+function tntDropLoop() {
+    setTimeout(function () {
+        console.log(("Creeper", theTimer));
+        if (theTimer > 5000) {
+            theTimer = theTimer * .9;
+            if (theTimer < 5000) {
+                theTimer = 120000;
+            }
         }
-    }
-    tntSpawn();
-    
-    tntDropLoop();
+        tntSpawn();
+
+        tntDropLoop();
     }, theTimer);
 }
 
@@ -32,7 +32,7 @@ function tntSpawn() {
     var commandLine = document.getElementById("stdin");
     var ul = document.getElementById("console_form");
     var li = document.getElementById("LOTSSSS");
-    commandLine.value = "execute at Darilli run summon minecraft:" + "creeper" + " ~ ~ ~";
+    commandLine.value = "execute at @a run summon minecraft:" + "creeper" + " ~ ~ ~";
     var ev1 = new Event("change");
     var ev2 = new Event("click");
     commandLine.focus();
@@ -45,12 +45,12 @@ function tntSpawn() {
 }
 
 function main() {
-    if (window.location.href.includes("4b961836-168c-4be4-aa1f-05d6a5d2319b?#!/instance/console")) {
+    if (window.location.href.includes("/instance/console")) {
         console.log("somehting is happening and on right page");
         frameInterval = setInterval(runStartApplication, 5000);
     }
-    
-    
+
+
     else {
         console.log("This is not the page you are lookign for")
     }
